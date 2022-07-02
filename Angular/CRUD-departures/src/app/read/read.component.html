@@ -1,0 +1,16 @@
+<div id="read">
+
+  <div *ngFor="let all of data" class="wrapper">
+  <div class="dep">DepartureID</div>
+  <div class="air">Airline</div>
+  <div class="city">City</div>
+  <div class="date">Date of departure</div>
+  <div class="dot">...</div>
+
+    <div class="dep">{{all.id}}</div>
+    <div class="air">{{all.airline}}</div>
+    <div class="city">{{all.city}}</div>
+    <div class="date">{{all.date}}</div>
+    <div class="dot"> <button [routerLink]="['/update',all.id]">UPD</button>  <button (click)="delete(all.id)">DEL</button></div>
+  </div>
+</div>

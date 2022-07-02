@@ -1,0 +1,9 @@
+<form [formGroup]="updForm">
+  <div>ID: {{this.paramID}}</div>
+  <div>
+  <input type="text" placeholder="change airline" formControlName="airline">
+    <input type="text" placeholder="change dep city" formControlName="city">
+    <input type="date" formControlName="date">
+  </div>
+  <button (click)="submit()">UPDATE</button>
+</form>

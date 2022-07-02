@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+  font-family: "Rockwell";
+}
+a{
+  margin: 10px;
+}
+a:hover{
+  color: cornflowerblue;
+}
+.wrapper{
+  margin-top: 30px;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1px;
+}
+.dep{background-color: whitesmoke;} .air{background-color: cadetblue} .city{background-color: cornflowerblue}
+.date{background-color: aliceblue}.dot{background-color: darkcyan}
+.city, .air, .dot{
+  color:whitesmoke;
+}
+div{
+  padding: 2px;
+}
