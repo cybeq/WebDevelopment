@@ -1,0 +1,8 @@
+<div><form [formGroup]="form">
+  <input type="text" placeholder="email" formControlName="email"><br/>
+  <input type="text" placeholder="password" formControlName="password"><br/>
+  <button (click)="submit()">submit</button>
+</form>
+<p *ngIf="warning=='no_user'" style="color:darkorange">There is no user</p>
+<p *ngIf="warning=='wrong_password'" style="color:darkorange">Wrong password</p>
+</div>

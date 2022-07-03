@@ -1,0 +1,23 @@
+<div class="header">
+  <div><p>Hey, {{user}}</p></div>
+  <button routerLink="login" *ngIf="user=='Guest'">Login</button> <button *ngIf="user=='Guest'">Register</button>
+  <button style="background: darkorchid" *ngIf="user!='Guest'" (click)="logout()">LogOut</button>
+</div>
+
+<div class="router">
+<router-outlet></router-outlet>
+</div>
+<div class="content">
+<div><h3>Profile</h3>
+  <p *ngIf="user=='Guest'">LogIn to see all features.</p>
+<app-profile *ngIf="user!='Guest'"></app-profile>
+</div>
+  <div><h3>Photos</h3>
+    <p *ngIf="user=='Guest'">LogIn to see all features.</p>
+  <app-photos *ngIf="user!='Guest'"></app-photos>
+  </div>
+  <div><h3>Notepad</h3>
+  <p *ngIf="user=='Guest'">LogIn to see all features.</p>
+  <app-notepad *ngIf="user!='Guest'"></app-notepad>
+  </div>
+</div>
