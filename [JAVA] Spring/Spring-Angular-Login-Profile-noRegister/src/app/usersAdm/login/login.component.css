@@ -1,0 +1,17 @@
+*
+{
+  text-align: center;
+}
+button{
+  width: 250px;
+  height:50px;
+  color: whitesmoke;
+  background-color: darkslategray;
+  border: 0;
+  cursor: pointer;
+}
+input{
+  margin-bottom: 3px;
+  width: 242px;
+  height: 30px;
+}
