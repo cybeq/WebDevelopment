@@ -1,0 +1,25 @@
+.header-row{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.separator-body-sidebar{
+  display: grid;
+  grid-template-columns:1fr 7fr 3fr 1fr;
+}
+.footer-separator{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.full-document{
+  min-width: fit-content;
+}
+.right-30{
+  margin-right: 0;
+  margin-left: auto;
+}
+@media(max-width: 900px){
+  .separator-body-sidebar{
+    display: grid;
+    grid-template-columns: 0.5fr 7fr 3fr 0.5fr;
+  }
+}

@@ -1,0 +1,21 @@
+<div class="full-topgen">
+  <div class="blank-topgen"></div>
+
+  <div class="content-topgen">
+<!--    -->
+    <div class="title-of-news"><h3>{{data[0].title}}</h3></div>
+<div class="photo-of-news"><img class="news_pic"[src]="data[0].photo"></div>
+<div class="data-of-news"><p>{{data[0].date}}</p></div>
+
+    <div class="content-of-news">
+      <label>
+        <img class="full-news-avatar" [src]="data[0].avatar">
+        <br/>{{data[0].username}}
+      </label>
+      {{data[0].content}}
+    </div>
+<!--  -->
+  </div>
+
+  <div class="blank-topgen"></div>
+</div>

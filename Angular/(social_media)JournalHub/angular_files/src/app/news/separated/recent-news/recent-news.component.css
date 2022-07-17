@@ -1,0 +1,28 @@
+.full-recent-news{
+  margin-top: 20px;
+  font-size: 130%;
+  color: white;
+}
+.right-windows{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.small-window{
+  height:150px;
+  background: darkblue;
+  display: flex;                   /* defines flexbox */
+  align-items: flex-end;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  text-shadow: 1px 1px 3px black;
+}
+label:hover{
+  opacity:90%;
+  cursor: pointer;
+  font-weight: bold;
+}
+@media(max-width: 900px){
+  .right-windows{
+    grid-template-columns: 1fr;
+  }
+}

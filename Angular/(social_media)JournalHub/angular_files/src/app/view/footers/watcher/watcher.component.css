@@ -1,0 +1,16 @@
+.full-watcher{
+  display:grid;
+  grid-template-columns: 1fr 10fr 1fr;
+background: black;
+  color: white;
+}
+
+
+
+
+
+@media(max-width: 900px){
+  .full-watcher{
+    grid-template-columns: 0.5fr 10fr 0.5fr;
+  }
+}

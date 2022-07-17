@@ -1,0 +1,27 @@
+<div class="full-top-news">
+  <div class="blank-top-news"></div>
+
+    <div *ngIf="loaded" class="content-top-news">
+<!--top-news-->
+<label [routerLink]="'top/'+this.topNews[0].news_id"><div [style]="'background:url('+this.topNews[0].photo+'); background-size: cover;'" class="big-window">{{windowTitle[0]}}</div></label>
+<div class="right-windows">
+
+ <label [routerLink]="'top/'+this.topNews[1].news_id"> <div [style]="'background:url('+this.topNews[1].photo+'); background-size: cover;'" class="small-window">{{windowTitle[1]}}</div></label>
+ <label [routerLink]="'top/'+this.topNews[2].news_id"> <div [style]="'background:url('+this.topNews[2].photo+'); background-size: cover;'" class="small-window">{{windowTitle[2]}}</div></label>
+ <label [routerLink]="'top/'+this.topNews[3].news_id"> <div [style]="'background:url('+this.topNews[3].photo+'); background-size: cover;'" class="small-window">{{windowTitle[3]}}</div></label>
+  <label [routerLink]="'top/'+this.topNews[4].news_id"><div [style]="'background:url('+this.topNews[4].photo+'); background-size: cover;'" class="small-window">{{windowTitle[4]}}</div></label>
+</div>
+
+<div *ngIf="!loaded" class="content-top-news">
+  <div></div>
+</div>
+
+
+
+
+
+<!-- top-news  -->
+    </div>
+
+  <div class="blank-top-news"></div>
+</div>

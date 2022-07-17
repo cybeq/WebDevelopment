@@ -1,0 +1,34 @@
+<div class="full-bar-header">
+  <div class="blank-bar-header"></div>
+  <div class="content-bar-header">
+
+    <div class="desktop">
+      <label><p routerLink="" class="link-desktop">Strona główna</p></label>
+      <label><p (click)="showCategories()" class="link-desktop">Kategorie</p></label>
+      <label><p routerLink="waiting" class="link-desktop">Poczekalnia</p></label>
+    </div>
+<div  *ngIf="showCats" class="categories">
+  <p class="category">🌎Świat</p> <p class="category"><label class="pl">🇵🇱</label>Polska</p>
+  <p class="category">🕵Kryminalne</p> <p class="category">⚔️Wojny i konflikty</p>
+  <p class="category">🌟Życie gwiazd i plotki</p> <p class="category">🔭Nauka</p>
+  <p class="category">🌙Pogoda i klimat</p>
+  </div>
+    <div class="mobile">
+    <div class="mobile-menu"><button class="menu-p">☰ Menu</button></div>
+      <div class="mobile-menu-list">
+      <ul>
+
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+      </ul>
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+  <div class="blank-bar-header"></div>
+</div>

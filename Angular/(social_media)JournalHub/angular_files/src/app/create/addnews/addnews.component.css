@@ -1,0 +1,83 @@
+.full-addnews{
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+}
+.warning{
+  width:100%;
+  text-align: center;
+  color: white;
+  background: red;
+  padding:5px;
+}
+input{
+  display:block;
+  width:100%;
+  margin-bottom: 5px;
+}
+input[type="checkbox"]{
+width: 10px;
+  display: inline;
+}
+input[name="title"]{
+  height: 30px;
+  font-size:100%;
+}
+
+textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  overflow: hidden;
+}
+@media(max-width: 900px){
+  .full-addnews{
+    grid-template-columns: 0.5fr 10fr 0.5fr;
+  }
+}
+.texting-active{
+  border:none;
+  color: grey;
+  background: darkgrey;
+  cursor: inherit;
+}
+.texting-disabled{
+  border:none;
+  color:white;
+  background: gainsboro;
+  cursor: inherit;
+}
+.texting-active:hover{
+  border:none;
+  color: grey;
+  background: darkgrey;
+}
+.texting-disabled:hover{
+  border:none;
+  color:white;
+  background: gainsboro;
+}
+button, input[type='submit']{
+  padding: 4px;
+  background: red;
+  border:none;
+  color: white;
+  cursor:pointer;
+}
+button:hover, input[type='submit']:hover{
+  background: crimson;
+}
+select{
+  border:none;
+  width:100%;
+  background: crimson;
+  color: white;
+  padding: 4px;
+}
+option{
+  background: green;
+}

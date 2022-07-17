@@ -1,0 +1,31 @@
+.full-banner{
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+}
+
+.content-banner{
+margin-top:30px;
+  margin-bottom:30px;
+}
+.banner{
+  margin:auto;
+  width:50%;
+  height:50px;
+  background: darkred;
+  box-shadow: 3px 3px 3px #00000030;
+  text-align: center;
+  padding-top:25px;
+  color: white;
+}
+
+
+
+
+@media(max-width: 900px){
+  .full-banner{
+    grid-template-columns: 0.5fr 10fr 0.5fr;
+  }
+  .banner{
+    width:100%;
+  }
+}

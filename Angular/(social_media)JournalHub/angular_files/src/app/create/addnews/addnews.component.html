@@ -1,0 +1,62 @@
+<div class="full-addnews">
+  <div class="blank-addnews"></div>
+<!--  -->
+
+  <div class="content-addnews">
+    <div class="warning" *ngIf="!logged">Nie jesteś zalogowany</div>
+    <div class="warning" style="background:darkblue" *ngIf="doneResponse=='wrong'">Nie możesz dodać następnego artykułu dopóki jeden znajduje się w poczekalni</div>
+    <div  *ngIf="logged && doneResponse!='wrong'">
+
+
+      <form  *ngIf="firstFormResponse==null" [formGroup]="postForm" (submit)="send()">
+        <button class="texting-active">➦napisz</button><button class="texting-disabled">➦dodaj zdjęcie</button><button class="texting-disabled">✓zatwierdź</button><br/>
+        <b>Tytuł</b>
+        <input [(ngModel)]="titleValue" (ngModelChange)="onTitleChange()" minlength="30" maxlength="120" type="text"  name="title" formControlName="title" >
+        <font *ngIf="counterTitle<30" color="red"><b>{{counterTitle}}</b></font>
+        <font *ngIf="counterTitle>=30" color="green">{{counterTitle}}</font>
+        /120<br/><br/>
+        <b>Kategoria</b><br/>
+        <select  id="category" name="category" formControlName="category" >
+          <option value="war" >Wojny i Konflikty</option>
+          <option value="poland">Polska</option>
+          <option value="world">Świat</option>
+          <option value="criminal">Kryminalne</option>
+          <option value="science">Nauka</option>
+          <option value="weather">Pogoda i natura</option>
+          <option value="stars">Życie gwiazd</option>
+        </select><br/><br/>
+        <b>Treść</b>
+        <textarea minlength="1000" oninput='this.style.height = "150px";this.style.height = this.scrollHeight + "px"' maxlength="12000" [(ngModel)]="textAreValue" (ngModelChange)="onTextChange()" name="content" formControlName="content" ></textarea>
+        <font *ngIf="counter<1000" color="red"><b>{{counter}}</b></font>
+        <font *ngIf="counter>=1000" color="green">{{counter}}</font>
+        /12000<font  size="1"> [1000/12000]</font>
+        <input type="submit" value="send">
+      </form>
+      <form *ngIf="firstFormResponse!=null && secondFormResponse==null">
+        <button class="texting-disabled">➦napisz</button><button class="texting-active">➦dodaj zdjęcie</button><button class="texting-disabled">✓zatwierdź</button><br/>
+        <h3>Twój artykuł został dodany i czeka na akceptację, a zdjęcie zostało wylosowane według kategorii.</h3>
+        <p>Możesz teraz dodać swoje zdjęcie.</p>
+        Pamiętaj jednak, że dodając zdjęcie musi ono być twojego autorstwa
+        lub spełniać wszystkie warunki publikacji zdjęć z regulaminu.<br/><br/>
+        <form [formGroup]="agreement">
+        <input type="file" (change)="photoFileOnChange($event)" accept="image/jpeg">
+          <p style="color:red" *ngIf="agreementWarning!=null"> {{agreementWarning}}</p>
+        akceptuję regulamin <input type="checkbox" formControlName="agree" id="agree" name="agree" value="true"><br/>
+        <button (click)="ownPhoto()"   >DODAJ</button><br/>
+        </form>
+        lub <br/><br/>
+        <button (click)="emptySecondResponse()">POMIŃ</button>
+      </form>
+      <label *ngIf="secondFormResponse!=null">
+        <button class="texting-disabled">➦napisz</button><button class="texting-disabled">➦dodaj zdjęcie</button><button class="texting-active" style="color:green">✓zatwierdź</button><br/>
+        Wszystko w porządku.<br/>
+        Jeśli twój artykuł spełnia regulamin pojawi się wkrótce na stronie!
+      </label>
+
+    </div>
+
+  </div>
+
+<!--  -->
+  <div class="blank-addnews"></div>
+</div>

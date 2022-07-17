@@ -1,0 +1,17 @@
+<div class="full-recent-news">
+  <div class="blank-recent-news"></div>
+    <div class="content-recent-news">
+<!--      -->
+
+      <div *ngIf="loaded" class="right-windows">
+
+        <label [routerLink]="'top/'+this.data[0].news_id"><div [style]="'background:url('+this.data[0].photo+'); background-size: cover;'" class="small-window">{{windowTitle[0]}}</div></label>
+        <label [routerLink]="'top/'+this.data[1].news_id"> <div [style]="'background:url('+this.data[1].photo+'); background-size: cover;'" class="small-window">{{windowTitle[1]}}</div></label>
+        <label [routerLink]="'top/'+this.data[2].news_id"> <div [style]="'background:url('+this.data[2].photo+'); background-size: cover;'" class="small-window">{{windowTitle[2]}}</div></label>
+        <label [routerLink]="'top/'+this.data[3].news_id"> <div [style]="'background:url('+this.data[3].photo+'); background-size: cover;'" class="small-window">{{windowTitle[3]}}</div></label>
+      </div>
+      <div *ngIf="!loaded" class="right-windows"></div>
+<!--      -->
+    </div>
+  <div class="blank-recent-news"></div>
+</div>

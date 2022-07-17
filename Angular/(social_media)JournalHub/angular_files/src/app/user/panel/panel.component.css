@@ -1,0 +1,37 @@
+.full-panel{
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+}
+@media(max-width: 900px){
+  .full-panel{
+    grid-template-columns: 0.5fr 10fr 0.5fr;
+  }
+}
+.content-panel {
+  display:grid; grid-template-columns: 1fr 1fr
+
+}
+
+.dane{
+  width:100%;
+  color:white;
+  background: gray;
+  padding:5px;
+  box-shadow: 3px 3px 3px #00000030;
+  border-radius: 3px;
+}
+.user-data{
+  margin:10px;
+  margin-top:20px;
+}
+.user-data:hover{
+  background: #00000002;
+}
+@media(max-width: 900px) {
+  .content-panel {
+    grid-template-columns: 1fr;
+  }
+  .user-data{
+    margin-left:0;
+  }
+}

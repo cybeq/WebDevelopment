@@ -1,0 +1,28 @@
+<div class="full-watcher">
+  <div class="blank-watcher"></div>
+<!--  -->
+  <div class="content-watcher">
+    <div *ngIf="data!=null" class="watcher-watcher">
+      <div [style]="'background: url('+data[0].photo+')'">
+        {{data[0].title}}
+      </div>
+      <div [style]="'background: url('+data[1].photo+')'">
+        {{data[1].title}}
+      </div>
+      <div [style]="'background: url('+data[2].photo+')'">
+        {{data[2].title}}
+      </div>
+      <div [style]="'background: url('+data[3].photo+')'">
+        {{data[3].title}}
+      </div>
+      <div [style]="'background: url('+data[4].photo+')'">
+        {{data[4].title}}
+      </div>
+    </div>
+
+
+
+  </div>
+<!--  -->
+  <div class="blank-watcher"></div>
+</div>
